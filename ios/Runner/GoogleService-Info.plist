@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1080802022131-toqr315pe0io1q0fmltv3i7iffcd7ofr.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1080802022131-toqr315pe0io1q0fmltv3i7iffcd7ofr</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1080802022131-5434stjbhnk96c3qafi57ioavlvon312.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCwBCtySWQy9Rm52SvzdK4-lPA5cens-NU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1080802022131</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.cantocraveadmin</string>
+	<key>PROJECT_ID</key>
+	<string>cantocrave-9532a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cantocrave-9532a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1080802022131:ios:d74defe96562b805fbdd86</string>
+	<key>DATABASE_URL</key>
+	<string>https://cantocrave-9532a-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
