@@ -78,16 +78,16 @@ class _LoginPageState extends State<LoginPage> {
     return Text(isLogin ? 'Login' : 'Register');
   }
 
-  Widget _loginOrRegisterButton() {
-    return TextButton(
-        onPressed: () {
-          setState(() {
-            isLogin = !isLogin;
-          });
-        },
-        child: Text(isLogin ? 'New User?..Register Here' : 'Login Instead',
-            style: TextStyle(color: Color.fromARGB(255, 190, 85, 44))));
-  }
+  // Widget _loginOrRegisterButton() {
+  //   return TextButton(
+  //       onPressed: () {
+  //         setState(() {
+  //           isLogin = !isLogin;
+  //         });
+  //       },
+  //       child: Text(isLogin ? 'New User?..Register Here' : 'Login Instead',
+  //           style: TextStyle(color: Color.fromARGB(255, 190, 85, 44))));
+  // }
 
   Widget _LoginButton() {
     return DecoratedBox(
@@ -102,8 +102,13 @@ class _LoginPageState extends State<LoginPage> {
           isLogin
               ? await sigInWithEmailAndPassword()
               : await createUserWithEmailAndPassword();
-          if (errorMessage == '' && _emailController.text.trim() == 'abcd@gmail.com') {
-            Navigator.pushNamed(context, MyRoutes.adminPageRoute);
+          if (errorMessage == '') {
+            if(_emailController.text.trim() == 'tanmaykamleshjain@gmail.com'){
+              Navigator.pushReplacementNamed(context, MyRoutes.adminPageRoute);
+            }
+            else{
+              errorMessage = "You aren't an Admin";
+            }
           }
         },
         child: Text(isLogin ? 'Login' : 'Register',
@@ -121,9 +126,10 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
         resizeToAvoidBottomInset: false, // to avoid image to squeezing of image
-
+    
         body: Material(
           child: Theme(
             data: MyLoginPageTheme.loginPageTheme(context),
@@ -133,7 +139,10 @@ class _LoginPageState extends State<LoginPage> {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                    ),
+                        gradient: LinearGradient(colors: [
+                      MyTheme.canvasLightColor,
+                      MyTheme.canvasDarkColor
+                    ])),
                   ),
                   SingleChildScrollView(
                     child: Container(
@@ -141,7 +150,7 @@ class _LoginPageState extends State<LoginPage> {
                           horizontal: MediaQuery.of(context).size.width * 0.21,
                           vertical: MediaQuery.of(context).size.height * 0.15),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Align(
                             alignment: Alignment.centerLeft,
@@ -177,7 +186,8 @@ class _LoginPageState extends State<LoginPage> {
                             height: MediaQuery.of(context).size.width * 0.07,
                           ),
                           _errorMessage(),
-                          _loginOrRegisterButton(),
+                          // _loginOrRegisterButton(),
+                          Image.asset("images/logo.png", height: size.height*0.15,)
                         ],
                       ),
                     ),

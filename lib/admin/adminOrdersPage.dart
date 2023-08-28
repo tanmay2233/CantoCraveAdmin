@@ -134,7 +134,7 @@ class AdminOrdersPage extends StatelessWidget {
                                   fontWeight: FontWeight.bold
                                 )),
                                 content: Text("This order would be removed",
-                                style: TextStyle(color: MyTheme.fontColor)),
+                                style: TextStyle(color: Colors.white)),
                                 
                                 actions: [
                                   TextButton(onPressed: () {
